@@ -10,7 +10,6 @@ def heapSort(arr):
     h.buildMaxHeap()
 
     for i in range(h.heapsize - 1, 1 - 1, -1):
-        print(i)
         arr[0], arr[i] = arr[i], arr[0]
         h.heapsize = h.heapsize - 1
         h.maxHeapify(0)
