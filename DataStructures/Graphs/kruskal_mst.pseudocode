@@ -1,0 +1,10 @@
+procedure kruskal (G)
+    T = {} // empty set
+    foreach v in V(G) do
+        Define cluster C(v) = {v}
+    sort edges in E(G) into non-decreasing weight order 
+    foreach edge eᵢ = (u,v) in E(G) do
+        if C(u) != C(v) then
+            T = T U {eᵢ}
+            merge clusters C(u) and C(v)
+    return T

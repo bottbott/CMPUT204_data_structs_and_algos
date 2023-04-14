@@ -3,9 +3,15 @@ class Node:
         self.key = key
         self.data = data
 
+    def __eq__(self, __value: object) -> bool:
+        return self.key == __value.key
+    
+    def __ne__(self, __value: object) -> bool:
+        return not self.__eq__(__value)
+
 class GraphNode(Node):
-    def __init__(self, data):
-        super().__init__(data)
+    def __init__(self, key, data):
+        super().__init__(key, data)
 
 class BFSNode(GraphNode):
     def __init__(self, key, data):

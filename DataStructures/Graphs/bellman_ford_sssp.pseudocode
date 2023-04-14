@@ -1,0 +1,16 @@
+procedure bellman-ford(G, w, s)
+    for each v in V(G) do
+        d[v] = ∞ // current best est
+        p[v] = NIL // predecessor
+    for i = 1 to n- 1
+        for each edge (u, v) in E(G) do
+            relax (u,v)
+    for each edge (u,v) in E(G) do
+        if d[u] + w(u, v) < d[u] then
+            return FALSE // detect neg cycle
+    return TRUE
+
+    // alt second for loop
+    for i = 1 to n - 1
+        for v in V do
+            d(i+1)[v] = min(d(i)[v], min for all neighbours u of v(d(i)[u] + w(u,v)))

@@ -1,0 +1,21 @@
+Procedure Merge-Sort (A; lo, hi)
+    if lo < hi then
+        mid = floor((lo + hi)/2)
+        Merge-Sort (A; lo, mid)
+        Merge-Sort (A; mid + 1, hi)
+        Merge (A; lo, mid, hi)
+
+Procedure Merge(A; lo, mid, hi)
+    B = A[lo, mid]
+    C = A[mid + 1, hi] 
+    result = new empty list
+    while (both B and C are non-empty)
+        if head (B) < head (C) Key comparisons
+            Append head (B) to result
+            Remove head(B) from B 
+        else:
+            Append head (C) to result
+            Remove head (C) from C
+    Append all remaining elements in (B) to result Append all remaining elements in (C) to result
+    A = result
+    Return A

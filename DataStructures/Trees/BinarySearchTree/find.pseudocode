@@ -1,0 +1,9 @@
+procedure Find(T,x)
+    if (T=nil) then 
+        return nil
+    if (T.root.key = x) then
+        return T // alternatively, return T.root
+    else if (x < T.root.key) then 
+        return Find (T.root.left, x)
+    else 
+        return Find (T.root.right, x) 

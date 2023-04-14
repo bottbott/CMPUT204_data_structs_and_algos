@@ -1,0 +1,4 @@
+procedure Heap-Insert (A, key)
+    heapsize[A] = heapsize[A] + 1
+    A[heapsize[A]] = -∞ // or any value
+    Heap-Increase-key (A, heapsize[A], key)

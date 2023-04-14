@@ -1,0 +1,16 @@
+procedure Topological-Sort(G)
+    S = {} // empty set
+    for each v in V do
+        if in-degree(v) == 0 then
+            S.enqueue(v)
+    i = 1
+    While S != {} do // not an empty set
+        v = S.dequeue()
+        output v
+        i = i + 1
+        for each vu do
+            Remove vu (so decrease in-degree(u))
+            if in-degree(u) == 0 then
+                S.enqueue(u)
+    if i < n then
+        return "G has a cycle"

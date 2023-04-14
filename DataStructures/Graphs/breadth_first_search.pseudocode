@@ -1,0 +1,18 @@
+procedure BFS(G, s) // G = (V,E), s in V start vertex
+    foreach v in V do
+            v.color = WHITE // unknown yet
+            v.dist = ∞ // distance from s
+            v.predec = NIL
+    Initialize a queue Q 
+    s.color = GRAY
+    s.dist = 0
+    enqueue (Q. s)
+    while (Q != {}) do // not an empty set
+        u = dequeue(Q)
+        foreach neighbor v of u do
+            if (v.color = WHITE) then
+            v.color = GRAY // discovered v
+            v.dist = u.dist + 1
+            v.predec = u
+            enqueue(Q, v)
+        u.color = BLACK // done with u

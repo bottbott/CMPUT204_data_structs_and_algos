@@ -1,0 +1,6 @@
+procedure FindMin (T)
+    // precondition: T isn't nil 
+    if (T.root.left =nil) then
+    return T // alternatively, return T.root
+    else 
+        return FindMin(T.root.left) 

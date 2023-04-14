@@ -1,0 +1,10 @@
+Procedure Frac-Knapsack (S, W)
+    for i = 1 to n do
+        xᵢ = 0
+        vᵢ = bᵢ / wᵢ
+    CurrentW = 0
+    While CurrentW < W do
+        let i be the next item in S with highest value
+        xᵢ = min {wᵢ, W - CurrentW}
+        add xᵢ amount of i to knapsack
+        CurrentW = CurrentW + Xᵢ

@@ -1,0 +1,12 @@
+procedure primMST(G)
+    for each v in V(G) do
+        v.key = ∞
+        v.predec = NIL
+    s.key = 0 // for some arbitrary start vertex s
+    Initialize a min-priority-queue Q on V using key
+    while (Q != {}) do
+        u = ExtractMin(Q)
+        foreach v neighbor of u do
+            if (v in Q and w(u, v) < v.key) then
+                v.predec = u
+                decrease-key(Q, v, w(u, v))

@@ -1,0 +1,19 @@
+procedure Knapsack (W, W1, ..., Wn, V1, .., Vn) 
+    for i = 1 to n do
+        A[i, 0] = 0
+    for D = 0 to W do
+        A[0, D] = 0
+    for i = 1 to n do
+        for D = 1 to W do
+        A[i, D] = A[i - 1, D]
+        if (D ≥ wᵢ and A[i, D] < A[i - 1, D - wᵢ] + vᵢ) then
+            A[i, D] + A[i - 1, D - wᵢ] + vᵢ
+    return A[n, W]
+
+procedure Print-Opt-Knapsack (A, i, D) 
+    if (i > 0 or D > 0) then
+        if (A[i, D] = A[i - 1, D]) then
+            Print-Opt-Knapsack (¡ - 1, D)
+        else
+            Print-Opt-Knapsack (i - 1, D - W;)
+            Print (i)

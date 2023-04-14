@@ -1,0 +1,9 @@
+procedure Activity-Selection (S)
+    Sort activities in S s.t. f1 <= f2 <= ... <= fn
+    A = {} // empty set
+    e = 0
+    for 1 = 1 to m do
+        if sᵢ >= e then
+        A = A U {i}
+        e = fᵢ 
+    return A

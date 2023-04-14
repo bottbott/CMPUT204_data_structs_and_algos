@@ -1,0 +1,26 @@
+procedure dijkstra(G,w,s)
+    foreach v in V(G) do
+        v.dist = ∞
+        v.predec + NIL.
+    s.dist = 0 
+    Build Min-Priority-Queue Q on all nodes, key = dist
+        // nodes in Q are nodes we are not yet sure about
+        // namely Q holds nodes in S
+    while (Q != {}) do // not empty set
+        u = ExtractMin(Q)
+        foreach v neighbor of u do
+            if (v.dist > u.dist + w(u, v)) then
+                v.dist = u.dist + w(u,v)
+                v.predec = u
+                decrease-key(Q, v, v.dist)
+
+procedure DAG-SSSP(G, s)
+    // Compute a topological ordering v1...vn 
+    for each v in V do
+        d[v] = 0
+        p[v] = NIL
+    for i = 1 to n - 1 do
+        for each u in Adj[vi] do
+            If d[u] > d[vi] + w(vi,u) then 
+                d[u] = d[vi] + w(vi, u)
+                p[u] = vi

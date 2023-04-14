@@ -1,0 +1,6 @@
+procedure Heap- Increase-Key(A, i, key)
+    ** Precondition: key > A[i]
+    A[i] + key
+    while (i > 1 and A[Parent(i)] < A[i]) do 
+        exchange(A[i], A[Parent(i)])
+        i = Parent(i)

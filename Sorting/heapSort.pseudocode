@@ -1,0 +1,7 @@
+procedure Heapsort (A)
+    // post-condition: sorted array
+    Build-Max-Heap (A)
+    for (i = heapsize (A) downto 2) do
+    exchange(A[1], A[i])
+    heapsize(A) = heapsize(A) - 1
+    Max-Heapify(A, 1)

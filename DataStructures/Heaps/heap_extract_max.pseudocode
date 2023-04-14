@@ -1,0 +1,8 @@
+procedure Heap-Extract-Max(A)
+    ** precondition: A isn't empty 
+    max = A[1]
+    A[1] = A[heapsize[A]]
+    heapsize[A] = heapsize[A] - 1
+    if (heapsize[A] > 0) then
+        Max-Heapify (A, 1) 
+    return max

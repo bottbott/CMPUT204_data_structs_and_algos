@@ -1,0 +1,20 @@
+procedure DFS(G) // G = (V, E)
+    foreach v in V do
+        u.color = WHITE
+        v.predec = NIL
+    time = 0
+    foreach v in V do
+        if (v.color = WHITE) then
+            DFS-visit(G, v) 
+            
+procedure DFS-visit(G, s) s.color + - GRAY
+    s.color = GRAY
+    time = time + 1
+    s.dtime = time
+    foreach u neighbor of s do
+        if (u.color = WHITE) then
+            u.predec = s
+            DFS-visit(G, u)
+        s.color = BLACK
+        time = time + 1
+        s.ftime = time

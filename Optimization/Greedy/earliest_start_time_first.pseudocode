@@ -1,0 +1,9 @@
+Proedure EarliestStartTimeFirst(T) // T is array of (start, end) time tuples
+    m = 1
+    While T != {}  do //not equal to empty set
+        extract next job i with smallest sᵢ, value from T
+        If i has no conflict with the last job on one of the m machines
+            Schedule i at the end of that machine
+        else
+            m = m + 1
+            schedule i on the new machine m

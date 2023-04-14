@@ -1,0 +1,15 @@
+procedure Max-Heapify(A, i)
+    **turns almost-heap into a heap
+    **pre-condition: tree rooted at A[i] is an almost-heap
+    **post-condition:
+    tree rooted at Ali is a heap
+    lc = leftchild(i)
+    rc = rightchild(i)
+    largest = i
+    if (lc < heapsize (A) and Allc > Allargest]) then
+        largest = lc
+    if (rc < heapsize (A) and Alrc] > Allargest]) then
+        largest = rc // largest = index of max{ A[i], A[rc], A[lc] }
+    if (largest # i) then
+        exchange(A[li], A[largest])
+        Max-Heapify(A, largest)

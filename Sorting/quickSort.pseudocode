@@ -1,0 +1,19 @@
+procedure QuickSort(A, start, end)
+    ** sorts the subarray A[start...end]
+    if (start < end) then
+        pivot = Partition(A, start, end)
+        // Partition returns q such that
+        // (i) A[pivot] = pivot,
+        // (ii) All elements <= pivot appear in A[start, ..., pivot - 1]
+        // (iii) All elements >= pivot appear in A[pivot + 1, ..., end]
+        QuickSort(A, start, pivot - 1)
+        QuickSort(A, pivot + 1, end)
+
+procedure Partition(A, start, end)
+    pivot = A[r]
+    i = start - 1
+    for (j from start to end - 1) do
+        if (A[j] < pivot) then
+            exchange(A[i], A[j])
+    exchange A[i + 1], A[end]
+    return i + 1

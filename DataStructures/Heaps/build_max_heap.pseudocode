@@ -1,0 +1,5 @@
+procedure Build-Max-Heap(A)
+    **turn an array into a heap 
+    heapsize(A) = length[A] 
+    for (i = floor(length[A]/2) downto 1) do
+        Max-Heapify (A, i)

@@ -1,0 +1,25 @@
+procedure Insert (T, x)
+    Tnew = a new tree
+    Trew.root = x
+    Trew.root.left = nil
+    Tnew.root.right = nil
+    if (T=nil) then
+    // if this is the first item in the tree. 
+        replace T with Trew
+    else
+        InsertTree (T, Tnew)
+
+procedure InsertTree (T, Tnew)
+    //  precondition: T isn't nil 
+    if (Tnew.root.key < T.root.key) then 
+        if (T.root.left =nil) then
+            T.root.left = Tnew
+            Tnew.root.parent = T
+        else
+            InsertTree (T.root.left, Tnew)
+    else // I.e., Tnew.root.key > T.root.key 
+        if (T.root.right = nil) then
+            T.root.right = Tnew
+            Tnew.root.parent = T
+        else
+            InsertTree (T.root.right, Tnew)

@@ -15,7 +15,7 @@ class Queue():
         return self.__contents[len(self.__contents)]
 
     def size(self):
-        return len(self.__contents) 
+        return len(self.__contents)
 
     def clear(self):
         self.__contents = list()
