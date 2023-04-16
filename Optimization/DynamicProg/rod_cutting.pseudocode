@@ -4,7 +4,7 @@ procedure CutRod (n, p)
     else
         q = -∞
         for i = 1 to n do
-            q = max{q, Pi + Cut-Rod(n - i, p)}
+            q = max{q, pᵢ + Cut-Rod(n - i, p)}
         return q
 
 procedure BottomUpCutRod(p,n)

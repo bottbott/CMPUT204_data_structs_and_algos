@@ -1,4 +1,4 @@
-Proedure EarliestStartTimeFirst(T) // T is array of (start, end) time tuples
+Procedure EarliestStartTimeFirst(T) // T is array of (start, end) time tuples
     m = 1
     While T != {}  do //not equal to empty set
         extract next job i with smallest sᵢ, value from T

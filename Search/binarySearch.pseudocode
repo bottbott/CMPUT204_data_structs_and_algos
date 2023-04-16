@@ -1,0 +1,10 @@
+Procedure BinarySearch(A, low, high, key)
+    mid = floor((low+high)/2)
+    if low > high
+        return -1
+    if A[mid] = key
+        return mid
+    else if A[mid] > key
+        return BinarySearch(A, low, mid, key)
+    else
+        return BinarySearch(A, mid+1, high, key)
