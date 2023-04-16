@@ -1,7 +1,7 @@
 procedure dijkstra(G,w,s)
     foreach v in V(G) do
         v.dist = ∞
-        v.predec + NIL.
+        v.predec = NIL
     s.dist = 0 
     Build Min-Priority-Queue Q on all nodes, key = dist
         // nodes in Q are nodes we are not yet sure about
@@ -15,7 +15,7 @@ procedure dijkstra(G,w,s)
                 decrease-key(Q, v, v.dist)
 
 procedure DAG-SSSP(G, s)
-    // Compute a topological ordering v1...vn 
+    Compute a topological ordering v1...vn 
     for each v in V do
         d[v] = 0
         p[v] = NIL
