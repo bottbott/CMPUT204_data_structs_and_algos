@@ -1,7 +1,5 @@
 procedure Max-Heapify(A, i)
-    **turns almost-heap into a heap
-    **pre-condition: tree rooted at A[i] is an almost-heap
-    **post-condition:
+    // almost heaps to heaps
     tree rooted at Ali is a heap
     lc = leftchild(i)
     rc = rightchild(i)

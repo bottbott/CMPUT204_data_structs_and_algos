@@ -17,10 +17,10 @@ procedure dijkstra(G,w,s)
 procedure DAG-SSSP(G, s)
     Compute a topological ordering v1...vn 
     for each v in V do
-        d[v] = 0
+        d[v] = ∞
         p[v] = NIL
     for i = 1 to n - 1 do
-        for each u in Adj[vi] do
-            If d[u] > d[vi] + w(vi,u) then 
-                d[u] = d[vi] + w(vi, u)
-                p[u] = vi
+        for each neigh in Adj[vi] do
+            If d[neigh] > d[vi] + w(vi,neigh) then 
+                d[neigh] = d[vi] + w(vi, neigh)
+                p[neigh] = vi
