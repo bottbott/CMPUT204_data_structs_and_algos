@@ -8,6 +8,9 @@ class Node:
     
     def __ne__(self, __value: object) -> bool:
         return not self.__eq__(__value)
+    
+    def __repr__(self) -> str:
+        return f"Key: {self.key}. Value: {self.data}"
 
 class GraphNode(Node):
     def __init__(self, key, data):
@@ -19,7 +22,11 @@ class BFSNode(GraphNode):
         self.color = None
         self.dist = None
         self.predecessesor = None
-
+        self.stime = None
+        self.ftime = None
+    def __repr__(self) -> str:
+        return f"Key: {self.key}. Value: {self.data}. Color: {self.color}. Pred: {self.predecessesor}. Dist: {self.dist}. Time: {self.stime}, {self.ftime}."
+    
 class TreeNode(Node):
     def __init__(self, data):
         super().__init__(data)
